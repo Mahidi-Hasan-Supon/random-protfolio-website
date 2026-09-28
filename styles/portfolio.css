@@ -198,16 +198,26 @@ footer input[type="text"],  footer input[type="email"], footer textarea{
     }
 }
 
-/* ট্যাবলেট স্ক্রিনের জন্য (৯৯২ পিক্সেলের নিচে) */
+/* ট্যাবলেট ও মোবাইল স্ক্রিনের জন্য (৯৯২ পিক্সেলের নিচে) */
 @media screen and (max-width: 992px) {
     nav {
         margin: 0 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        padding: 0;
+        justify-content: center;
     }
     nav ul li {
-        margin-right: 25px;
+        margin: 0 15px;
+    }
+    .nav-title {
+        font-size: 35px;
+        text-align: center;
     }
     .banner {
-        flex-direction: column-reverse; /* ছবি উপরে এবং লেখা নিচে নেওয়ার জন্য */
+        flex-direction: column-reverse; /* ছবি উপরে, লেখা নিচে */
         text-align: center;
         margin: 0 20px;
         gap: 30px;
@@ -216,67 +226,32 @@ footer input[type="text"],  footer input[type="email"], footer textarea{
         max-width: 100%;
     }
     .banner-title {
-        font-size: 60px;
+        font-size: 50px;
     }
     .banner-profile-pic {
-        width: 80%;
+        width: 100%;
+        max-width: 400px; /* ছবি যেন খুব বেশি বড় না হয় */
+        margin: 0 auto;
     }
     .about {
-        padding: 80px 40px;
+        padding: 60px 20px;
     }
     .about-items {
-        flex-wrap: wrap; /* জায়গা না থাকলে নিচে চলে আসবে */
-        gap: 30px;
+        flex-direction: column;
+        gap: 20px;
     }
     .skills-container, .resume-container {
-        flex-direction: column; /* পাশাপাশি থেকে নিচে নিচে চলে আসবে */
+        flex-direction: column;
     }
     footer {
         flex-direction: column;
         padding: 60px 20px;
+        gap: 40px;
     }
     .footer-column {
         width: 100%;
     }
 }
-
-/* মোবাইল স্ক্রিনের জন্য (৫৭৬ পিক্সেলের নিচে) */
-@media screen and (max-width: 576px) {
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-    nav ul {
-        padding: 0;
-    }
-    nav ul li {
-        margin: 0 10px;
-    }
-    nav li a {
-        font-size: 16px;
-    }
-    .nav-title {
-        font-size: 35px;
-    }
-    .banner-greetings {
-        font-size: 30px;
-    }
-    .banner-title {
-        font-size: 40px;
-    }
-    .btn-primary {
-        font-size: 16px;
-        padding: 12px 25px;
-    }
-    main section {
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
-    .section-title {
-        font-size: 28px;
-    }
-}
-
 
 
 
